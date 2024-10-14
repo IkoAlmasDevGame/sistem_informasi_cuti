@@ -1,4 +1,4 @@
-<?php require_once("../../../config/config.php"); ?>
+<?php require_once("../../../../config/config.php"); ?>
 <script src="<?=baseurl('dist/vendor/apexcharts/apexcharts.min.js')?>"></script>
 <script src="<?=baseurl('dist/vendor/chart.js/chart.umd.js')?>"></script>
 <script src="<?=baseurl('dist/vendor/echarts/echarts.min.js')?>"></script>
@@ -18,21 +18,29 @@
 <script crossorigin="anonymous" src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
 <script lang="javascript" crossorigin="anonymous">
 /* Settings DataTables */
-new DataTable('#example1', {
-        search: {
-            return: false,
-        },
-    },
-    $(document).ready(function() {
-        $('#example1_filter').hide(true),
-            $('#example1_length').hide(true)
-    }),
-);
+$(document).ready(function() {
+    $('#tabel-data').DataTable({
+        "responsive": true,
+        "processing": true,
+        "columnDefs": [{
+            "orderable": false,
+            "targets": []
+        }]
+    });
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#aksi').change(function() {
+        if ($(this).val() === '2') {
+            $('#spv').attr('disabled', 'disabled');
+            $('#reject').attr('disabled', false);
+        } else {
+            $('#spv').attr('disabled', false);
+            $('#reject').attr('disabled', 'disabled');
+        }
+    });
 
-new DataTable('#example2', {
-    search: {
-        return: false,
-    },
 });
 </script>
 </body>

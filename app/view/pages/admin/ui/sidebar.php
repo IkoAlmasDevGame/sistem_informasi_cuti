@@ -69,7 +69,7 @@
                 <i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul class="nav-content collapse" id="karyawan-nav" data-bs-parent="#sidebar-nav">
-                <a href="" aria-current="page">
+                <a href="?page=karyawan" aria-current="page">
                     <i class="bi bi-circle fa-1x"></i>
                     <span>Karyawan / Pegawai</span>
                 </a>
@@ -84,15 +84,15 @@
                 <i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul class="nav-content collapse" id="approval-nav" data-bs-parent="#sidebar-nav">
-                <a href="" aria-current="page">
+                <a href="?page=approval-wait" aria-current="page">
                     <i class="bi bi-circle fa-1x"></i>
                     <span>Menunggu Approval</span>
                 </a>
-                <a href="" aria-current="page">
+                <a href="?page=approval" aria-current="page">
                     <i class="bi bi-circle fa-1x"></i>
                     <span>Approved</span>
                 </a>
-                <a href="" aria-current="page">
+                <a href="?page=approval-all" aria-current="page">
                     <i class="bi bi-circle fa-1x"></i>
                     <span>Semua Data</span>
                 </a>
@@ -158,3 +158,4 @@
     <?php }else{ ?>
     <?php header("location:../../auth/index.php"); ?>
     <?php } ?>
+    <?php require_once("../../admin/ui/footer.php") ?>

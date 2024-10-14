@@ -18,21 +18,34 @@
 <script crossorigin="anonymous" src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
 <script lang="javascript" crossorigin="anonymous">
 /* Settings DataTables */
-new DataTable('#example1', {
-        search: {
-            return: false,
-        },
-    },
-    $(document).ready(function() {
-        $('#example1_filter').hide(true),
-            $('#example1_length').hide(true)
-    }),
-);
+$(document).ready(function() {
+    $('#example1').DataTable({
+        "responsive": true,
+        "processing": true,
+        "columnDefs": [{
+            "orderable": false,
+            "targets": [6]
+        }]
+    });
+    $('#example1_filter').hide(true);
+    $('#example1_length').hide(true);
+    $('#example1').parent().addClass("table-responsive");
+});
 
 new DataTable('#example2', {
     search: {
         return: false,
     },
+});
+
+$(document).ready(function() {
+    $('#aksi').change(function() {
+        if ($(this).val() === '2') {
+            $('#reject').attr('disabled', false);
+        } else {
+            $('#reject').attr('disabled', 'disabled');
+        }
+    });
 });
 </script>
 </body>

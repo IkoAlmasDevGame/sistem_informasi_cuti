@@ -1,5 +1,4 @@
 <?php 
-// error_reporting(0);
 date_default_timezone_set("Asia/Jakarta");
 $konfigs = mysqli_connect("localhost", "root", "", "db_cuti") or mysqli_connect_errno();
 try {

@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <?php
             session_start();
-            require_once("../../auth.php");
+            require_once("../../../pages/auth.php");
+            require_once("../../leader/route/route.php");
             require_once("../../../../config/config.php");
-            require_once("../route/route.php");
             require_once("../../../../database/koneksi.php");
         ?>
         <title>Dashboard</title>
@@ -25,7 +25,8 @@
         <link href="<?=baseurl('dist/vendor/remixicon/remixicon.css')?>" crossorigin="anonymous" rel="stylesheet">
         <link href="<?=baseurl('dist/vendor/simple-datatables/style.css')?>" crossorigin="anonymous" rel="stylesheet">
         <link href="<?=baseurl('dist/css/style.css')?>" crossorigin="anonymous" rel="stylesheet">
-        <link rel="stylesheet" crossorigin="anonymous" href="<?=baseurl('app/view/pages/ui/styles.css')?>">
+        <link rel="stylesheet" crossorigin="anonymous" href="<?=baseurl('app/view/pages/leader/ui/styles.css')?>">
     </head>
 
     <body class="body">
+        <?php require_once("../ui/sidebar.php"); ?>

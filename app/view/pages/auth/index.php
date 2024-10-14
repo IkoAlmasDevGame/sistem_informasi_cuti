@@ -72,15 +72,15 @@
                                 <div class="form-inline row justify-content-center
                                  align-items-center flex-wrap mb-1 mt-1">
                                     <div class="form-label col-sm-2 col-md-3">
-                                        <label for="pass" class="label label-default">Hak Ases</label>
+                                        <label for="" class="label label-default">Hak Ases</label>
                                     </div>
                                     <div class="col-sm-8 col-md-9">
                                         <select name="akses" required class="form-select" id="">
                                             <option value="0" disabled selected>Pilih Hak Akses</option>
-                                            <option value="Admin">Admin</option>
+                                            <option value="Admin">Admin/HRD</option>
                                             <option value="Lead">Leader</option>
                                             <option value="Mng">Manager</option>
-                                            <option value="Supervisor">Supervisor</option>
+                                            <option value="Spv">Supervisor</option>
                                         </select>
                                     </div>
                                 </div>
